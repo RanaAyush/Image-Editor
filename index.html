@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cropperjs/cropper.min.css">
+    <link rel="stylesheet" href="util.css">
+    <title>Image selector project</title>
+</head>
+<body>
+    <div class="container hide img-contain" id="processing-container">
+        <div>
+            <button id="rotate">Rotate</button>
+            <select name="flip" id="flip" > 
+                <option value="default">Flip</option>
+                <option value="horizontally">
+                    Horizontally
+                </option>
+                <option value="vertically">Vertically</option>
+            </select>
+            <button id="crop-btn">Crop</button>
+        </div>
+        <img id="preview-img" src="" alt="preview image" class="">
+    </div>
+
+    <section class="container hide" id="addframe">
+        <div class="container frame-container">
+            <div style="display: flex; justify-content: space-around;">
+                <h3 class="text-uploaded">Uploaded Image</h3>
+                <button id="X-btn">X</button>
+            </div>
+            <div>
+                <img src="" alt="add frame here" id="edit-frame-img">
+            </div>
+            <div class="e-btns">
+                <button style="width: 80px; height: 38px; color: rgb(142, 123, 123);" onclick="changeOriginal()">Original</button>
+                <img src="asset/f1.png" alt="Heart" class="sm-frame" id="heart">
+                <img src="asset/f2.png" alt="Square" class="sm-frame" id="square">
+                <img src="asset/f3.png" alt="Circle" class="sm-frame" id="circle">
+                <img src="asset/f4.png" alt="Rectangle" class="sm-frame" id="rect">
+            </div>
+            <button id="use-img-btn" onclick="displayImage()">Use this image</button>
+
+        </div>
+    </section>
+    <div class="green"></div>
+    <nav class="container bb">
+        <div class="head">
+            <h1>
+                Add Image / Icon
+            </h1>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="ctnborder">
+            <div class="gap-r font-l ">
+                <div class="gap-r font-s ">Upload Image</div>
+                <label for="file-upload" class="btn">Choose from Device</label>
+            </div >
+            <input class="gap-r font-l u-btn" type="file" id="file-upload" name="image" accept="image/*">
+        </div>
+    </main>
+    <section class="container" style="display: flex; justify-content: center;">
+        <div class="preview" id="output-container">
+            <img  id="final-img">
+        </div>
+    </section>
+    <script src="cropperjs/cropper.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
